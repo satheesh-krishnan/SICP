@@ -1,0 +1,7 @@
+(define (repeated f i)
+(lambda (x)
+    (define (rep f i)
+    (if (= i 1)
+     (f x)
+     (f (rep f (- i 1)))))
+(rep f i)))
